@@ -1,0 +1,58 @@
+$ pdal info --metadata 001092.las
+{
+  "file_size": 29863461,
+  "filename": "001092.las",
+  "metadata":
+  {
+    "comp_spatialreference": "",
+    "compressed": false,
+    "count": 1066544,
+    "creation_doy": 194,
+    "creation_year": 2018,
+    "dataformat_id": 1,
+    "dataoffset": 229,
+    "filesource_id": 0,
+    "global_encoding": 0,
+    "global_encoding_base64": "AAA=",
+    "header_size": 227,
+    "major_version": 1,
+    "maxx": 576842.69,
+    "maxy": 704940.92,
+    "maxz": 423.5,
+    "minor_version": 2,
+    "minx": 576389.78,
+    "miny": 703940.93,
+    "minz": 26.37,
+    "offset_x": 0,
+    "offset_y": 0,
+    "offset_z": 0,
+    "point_length": 28,
+    "project_id": "00000000-0000-0000-0000-000000000000",
+    "scale_x": 0.01,
+    "scale_y": 0.01,
+    "scale_z": 0.01,
+    "software_id": "TerraScan",
+    "spatialreference": "",
+    "srs":
+    {
+      "compoundwkt": "",
+      "horizontal": "",
+      "isgeocentric": false,
+      "isgeographic": false,
+      "prettycompoundwkt": "",
+      "prettywkt": "",
+      "proj4": "",
+      "units":
+      {
+        "horizontal": "unknown",
+        "vertical": ""
+      },
+      "vertical": "",
+      "wkt": ""
+    },
+    "system_id": ""
+  },
+  "now": "2020-12-21T04:21:36+0800",
+  "pdal_version": "2.2.0 (git-version: 47145b)",
+  "reader": "readers.las"
+}

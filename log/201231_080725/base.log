@@ -1,0 +1,31 @@
+
+LOG
+log/201231_080725 true
+
+DIR
+/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/DSM las
+
+MERGE_PROJECT_LAS
+pdal pipeline --stream "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/pipe_merge_proj.json"
+0
+ok
+duration = 53s
+size = ~1.01Gb
+
+CONVERT_LAS_TO_GEOTIFF
+pdal pipeline --stream "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/pipe_convert.json"
+0
+ok
+duration = 99s
+
+FIX_TIF
+gdal_fillnodata.py "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/output.tif" "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/output_fixed.tif"
+0
+ok
+duration = 13s
+
+[0, 0, 0]
+
+overall = ok
+______________________________
+

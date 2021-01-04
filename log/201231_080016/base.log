@@ -1,0 +1,35 @@
+2020-12-31 08:00:16,662 
+2020-12-31 08:00:16,662 LOG
+2020-12-31 08:00:16,662 log/201231_080016 true
+2020-12-31 08:00:16,662 
+2020-12-31 08:00:16,665 DIR
+2020-12-31 08:00:16,665 /home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/DSM las
+2020-12-31 08:00:16,665 
+2020-12-31 08:01:11,525 MERGE_PROJECT_LAS
+2020-12-31 08:01:11,525 pdal pipeline --stream "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/pipe_merge_proj.json"
+2020-12-31 08:01:11,526 0
+2020-12-31 08:01:11,526 ok
+2020-12-31 08:01:11,526 duration = 55s
+2020-12-31 08:01:11,526 size = ~1.01Gb
+2020-12-31 08:01:11,526 
+2020-12-31 08:02:50,656 CONVERT_LAS_TO_GEOTIFF
+2020-12-31 08:02:50,656 pdal pipeline --stream "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/pipe_convert.json"
+2020-12-31 08:02:50,656 0
+2020-12-31 08:02:50,656 ok
+2020-12-31 08:02:50,656 duration = 99s
+2020-12-31 08:02:50,656 
+2020-12-31 08:03:03,215 FIX_TIF
+2020-12-31 08:03:03,215 gdal_fillnodata.py "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/output.tif" "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/output_fixed.tif"
+2020-12-31 08:03:03,215 0
+2020-12-31 08:03:03,215 ok
+2020-12-31 08:03:03,216 duration = 13s
+2020-12-31 08:03:03,216 
+2020-12-31 08:03:03,216 [0, 0, ('fix_tif', 'gdal_fillnodata.py "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/output.tif" "/home/mac/my/prj_new/auto/las2geotiff/dat_test/01 DSM LAS TO GEOTIFF/03_FT115 - Jln Kuala Teriang_Pantai Tengah/output_fixed.tif"', 0)]
+2020-12-31 08:03:03,216 
+2020-12-31 08:03:03,217 Traceback (most recent call last):
+  File "/home/mac/my/prj_new/auto/las2geotiff/r15/app/agent_las2geotiff.py", line 98, in do
+    self.logger.log_overall(outs, mydir)
+  File "/home/mac/my/prj_new/auto/las2geotiff/r15/app/agent_logger.py", line 90, in log_overall
+    self.log('overall = ok') if self.all_zeroes(outs) else self.logger.log('overall = err')
+AttributeError: 'AgentLogger' object has no attribute 'logger'
+
