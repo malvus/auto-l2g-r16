@@ -71,8 +71,26 @@ class AgentLas2Geotiff():
         except:
             self.logger.log(traceback.format_exc()) 
         return b4
-        
-      
+
+ 
+    def clean_up(self):
+        try:
+            filename = os.path.join(self.dir, self.file_pipe_merge_project)
+            if os.path.exists(filename):
+                os.remove(filename) 
+            filename = os.path.join(self.dir, self.file_pipe_convert)
+            if os.path.exists(filename):
+                os.remove(filename) 
+            filename = os.path.join(self.dir, self.file_las)
+            if os.path.exists(filename):
+                os.remove(filename) 
+            filename = os.path.join(self.dir, self.file_tif)
+            if os.path.exists(filename):
+                os.remove(filename) 	
+        except:
+            self.logger.log(traceback.format_exc()) 
+            
+         
     def do(self, path, cont=''):
         try:
             mydirs = self.util.get_las_dirs(path)
@@ -96,6 +114,7 @@ class AgentLas2Geotiff():
                     name, cmd, out = fix_tif.do(file_tif, file_tif_fixed)
                     outs.append(out)
                     self.logger.log_overall(outs, mydir)
+                    self.clean_up()
                     print('testing .. break')
                     break
                 else:
